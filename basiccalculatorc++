@@ -3,7 +3,7 @@
 using namespace std; 
 
 //THIS CODE IS IN PORTUGUESE
-//BECAUSE OF THE ACCENTUACION, COPY-PASTE IN ONLINEGDB, for better use.
+//BECAUSE OF THE ACCENTUATION, COPY-PASTE IN ONLINEGDB, for better use.
 
 int main (){
     
