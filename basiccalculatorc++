@@ -1,0 +1,183 @@
+#include <iostream>
+#include <math.h>
+using namespace std; 
+
+//THIS CODE IS IN PORTUGUESE
+//BECAUSE OF THE ACCENTUACION, COPY-PASTE IN ONLINEGDB, for better use.
+
+int main (){
+    
+    float n1, n2, n3, delta, x1, x2, r1, r2, r3, r4, r5, r6, r7, r8, si, sf, ti, tf, vm, vm2, fat;
+    int operacao, expoente, contador; 
+    char opcao;
+    
+do{    
+    
+    cout<<"Qual operação você deseja fazer?\n";
+    cout<<" 1 - Adiçao\n 2 - Subtraçao\n 3 - Multiplicaçao\n 4 - Divisao\n 5 - Bhaskara\n 6 - Raiz Quadrada\n 7 - Potenciação\n 8 - Tabuada\n 9 - Velocidade Média (Vm)\n 10 - Fatorial\n\n";
+    cin>>operacao;
+
+switch(operacao){
+    
+case 1: cout<<"Digite o 1º Número:\n";
+        cin>>n1;
+        cout<<"Digite o 2º Número:\n";
+        cin>>n2;
+        
+        r1 = n1+n2;
+        
+        cout<<"O resultado é: "<<r1;
+        break;
+
+case 2: cout<<"Digite o 1º Número:\n";
+        cin>>n1;
+        cout<<"Digite o 2º Número:\n";
+        cin>>n2;
+        
+        r2 = n1-n2;
+        
+        cout<<"O resultado é: "<<r2;
+        break;   
+
+case 3: cout<<"Digite o 1º Número:\n";
+        cin>>n1;
+        cout<<"Digite o 2º Número:\n";
+        cin>>n2;
+        
+        r3 = n1*n2;
+        
+        cout<<"O resultado é: "<<r3;
+        break;
+        
+case 4: cout<<"Digite o 1º Número:\n";
+        cin>>n1;
+        cout<<"Digite o 2º Número:\n";
+        cin>>n2;
+        
+        if (n2 == 0)
+        {
+           cout<<"Impossível dividir por 0!";
+        }
+        else
+        {
+        
+        r4 = n1/n2;
+        
+        cout<<"O resultado é: "<<r4;
+        
+        }
+        break;
+        
+case 5: cout<<"Qual o índice de ax²?:\n";        
+        cin>>n1;                               
+        cout<<"Qual o índice de bx?:\n";
+        cin>>n2;
+        cout<<"Qual o índice c?:\n";
+        cin>>n3;
+        
+        delta = (n2*n2)-(4*n1*n3);
+        
+        if (delta < 0)
+        {
+            cout<<"Erro! Delta é menor que 0.";
+        }
+        else
+        {
+        x1 = ((-(n2)) + sqrt(delta))/(2*n1);
+        x2 = ((-(n2)) - sqrt(delta))/(2*n1);
+        
+        cout<<"Δ é: "<<delta<<"\n";
+        cout<<"x1 é: "<<x1<<"\n";
+        cout<<"x2 é: "<<x2<<"\n";
+        }
+        
+        break;
+        
+case 6: cout<<"Digite o número:\n";
+        cin>>n1;
+        
+        if (n1 < 0)
+        {
+            cout<<"Não existe raíz real.";
+        }
+        else
+        {
+        r5 = sqrt(n1);
+        
+        cout<<"A raíz é: "<<r5;
+        }
+        break;
+        
+case 7: cout<<"Digite qualquer número:\n";
+        cin>>n1;
+        cout<<"Digite o exponte:\n";
+        cin>>expoente;
+        
+        r6 = pow(n1, expoente);
+        
+        cout<<"Resultado é: "<<r6;
+        break;
+
+case 8: cout<<"Qual tabuada deseja calcular?\n";    
+        cin>>n1;
+    
+        contador = 0;
+        while (contador >=0 && contador <=10){
+        r8 = n1 * contador;
+        cout<<n1<<" * "<<contador<<" = "<<r8<<"\n";
+        contador++;
+    }
+    break;
+    
+case 9: cout<<"Qual a posição final? (Em metros) ";
+        cin>>sf;
+        cout<<"Qual a posição inicial? (Em metros) ";
+        cin>>si;
+        cout<<"Qual foi o tempo final? (Em segundos) ";
+        cin>>tf;
+        cout<<"Qual foi o tempo inicial? (Em segundos) ";
+        cin>>ti;
+        
+        vm = (sf - si)/(tf - ti);
+        
+        vm2 = vm*3.6;
+        
+        cout<<"Vm = "<<vm<<"m/s"<<" ou "<<vm2<<"km/h";
+        break;
+
+case 10: cout<<"Digite o número fatorial a ser calculado (N!) ";
+        cin>>n1;
+
+
+        for(fat = 1; n1>1; n1--){
+ 
+        fat = fat * n1;
+        cout<<n1<<" * ";
+}
+        cout<<"1 = "<<fat;
+        break;
+        
+default: cout<<"Opção inválida!"; 
+
+  }
+  
+  cout<<"\n\nDeseja fazer outra operação? ";
+  cin>>opcao;
+  cout<<"\n\n";
+    
+} while (opcao == 's' || opcao == 'S');     
+
+}
+    
+    
+
+
+
+
+
+
+
+
+
+
+
